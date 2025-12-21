@@ -1,0 +1,40 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'maven-publish'
+    id("io.freefair.lombok") version "8.11"
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2')
+    }
+}
+
+apply plugin : "java"
+
+ext {
+    // for ./gradlew run
+    javaMainClass = "ffmpeg.privatevideos.y2018.m04.Slowenien"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+dependencies {
+    implementation group: 'io.github.yafimnle', name: 'yafimnle-core', version: '0.7.1-SNAPSHOT'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.25.3' // Apache-2.0 license  https://github.com/apache/logging-log4j2
+    implementation 'org.reflections:reflections:0.10.2'
+
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation("commons-io:commons-io:2.21.0")
+}
