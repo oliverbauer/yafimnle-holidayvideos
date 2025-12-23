@@ -176,7 +176,7 @@ public class Y_2023_M_05_Slowenien extends AbstractNewApproach {
     }
 
     public File gen20230601() {
-        sourceDir = "/media/oliver/Extreme SSD/2023/2023.06.01_slap_sobota_slap_beri";
+        sourceDir = "/media/oliver/Extreme SSD/2023/2023.06.01_slap_sopota_slap_beri";
         subTitle = "2023.06.01 Slowenien";
         setup();
 

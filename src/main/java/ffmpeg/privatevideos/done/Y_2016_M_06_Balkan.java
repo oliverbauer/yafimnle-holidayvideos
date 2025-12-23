@@ -388,10 +388,10 @@ public class Y_2016_M_06_Balkan extends AbstractNewApproach {
 
     private File get20160624() {
         sourceDir = "/media/oliver/Extreme SSD/2016/2016.06.24_Ulcinj";
-        subTitle = "2026.06.24 Ulcinj";
+        subTitle = "2016.06.24 Ulcinj";
         setup();
 
-        var yaFIMnle = new YaFIMnle("2026.06.24");
+        var yaFIMnle = new YaFIMnle("2016.06.24");
         List<Builder> builders = new ArrayList<>();
         builders.add(img("09_41_53.nef"));
         builders.add(img("10_18_05.nef"));
@@ -420,10 +420,10 @@ public class Y_2016_M_06_Balkan extends AbstractNewApproach {
 
     private File get20160625() {
         sourceDir = "/media/oliver/Extreme SSD/2016/2016.06.25_Herceg_Novi";
-        subTitle = "2026.06.25 Herceg Novi";
+        subTitle = "2016.06.25 Herceg Novi";
         setup();
 
-        var yaFIMnle = new YaFIMnle("2026.06.25");
+        var yaFIMnle = new YaFIMnle("2016.06.25");
         List<Builder> builders = new ArrayList<>();
         builders.add(vid("13_41_46.mts")); // Auszüge
         builders.add(vid("16_11_26.mts"));
@@ -453,10 +453,10 @@ public class Y_2016_M_06_Balkan extends AbstractNewApproach {
 
     private File get20160626() {
         sourceDir = "/media/oliver/Extreme SSD/2016/2016.06.26_Dubrovnik";
-        subTitle = "2026.06.26 Dubrovnik";
+        subTitle = "2016.06.26 Dubrovnik";
         setup();
 
-        var yaFIMnle = new YaFIMnle("2026.06.26");
+        var yaFIMnle = new YaFIMnle("2016.06.26");
         List<Builder> builders = new ArrayList<>();
         builders.add(img("10_25_51.nef"));
         builders.add(img("10_52_56.nef"));

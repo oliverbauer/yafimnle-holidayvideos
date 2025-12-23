@@ -42,7 +42,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240703() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/07/03_dresden";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.07.03_dresden";
         subTitle = "2024.07.03 Dresden";
         setup();
 
@@ -59,7 +59,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240704() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/07/04_wehlen_rathen";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.07.04_wehlen_rathen";
         subTitle = "2024.07.04 Sächsische Schweiz";
         setup();
 
@@ -84,7 +84,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240708() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/07/08_ravennaschlucht_donaueschingen";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.07.08_ravennaschlucht_donaueschingen";
         subTitle = "2024.07.08 Baden Würtemberg";
         setup();
 
@@ -108,7 +108,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240709() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/07/09_bodensee";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.07.09_bodensee";
         subTitle = "2024.07.09 Bodensee";
         setup();
 
@@ -137,7 +137,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240718() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/07/18_wolfsklamm";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.07.18_wolfsklamm";
         subTitle = "2024.07.18 Wolfsklamm in Stans bei Schwaz";
         setup();
 
@@ -168,7 +168,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240727() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/07/27_irrel_teufelsschlucht";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.07.27_irrel_teufelsschlucht";
         subTitle = "2024.07.27 Teufelsschlucht (Irrel)";
         setup();
 
@@ -188,7 +188,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240728() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/07/28_echternach_wolfsschlucht";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.07.28_echternach_wolfsschlucht";
         subTitle = "2024.07.28 Echternach (Luxemburg)";
         setup();
 
@@ -207,7 +207,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240806() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/08/06_zell_am_see";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.08.06_zell_am_see";
         subTitle = "2024.08.06 Zell am See";
         setup();
 
@@ -222,7 +222,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240828() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/08/28_partnachklamm_hausberg";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.08.28_partnachklamm_hausberg";
         subTitle = "2024.08.28 Partnachklamm";
         setup();
 
@@ -243,7 +243,7 @@ public class Y_2024_M_08_Sabbatical_2024 extends AbstractNewApproach {
     }
 
     private File gen20240829() {
-        sourceDir = "/media/oliver/Extreme SSD/2024/08/29_gleirschklamm";
+        sourceDir = "/media/oliver/Extreme SSD/2024/2024.08.29_gleirschklamm";
         subTitle = "2024.08.29 Gleirschklamm";
         setup();
 

@@ -1,9 +1,5 @@
 package ffmpeg.privatevideos;
 
-import ffmpeg.privatevideos.done.Y_2015_Y_M05_AlpeAdriaTrail;
-import ffmpeg.privatevideos.done.Y_2016_M_06_Balkan;
-import ffmpeg.privatevideos.done.Y_2023_M_06_D_01_Slowenien_Slap_Sopota_Slap_Beri;
-import ffmpeg.privatevideos.done.Y_2025_M_11_D_01_Dortmunder_Westen;
 import io.github.yafimnle.utils.CLI;
 import org.reflections.Reflections;
 
@@ -27,9 +23,11 @@ public class NightlyRun {
         for (Class<?> clazz : allClasses) {
             classMap.put(clazz.getSimpleName(), clazz);
         }
+/*
         classMap.remove(Y_2015_Y_M05_AlpeAdriaTrail.class.getSimpleName()); // Done 21. Dez. 2025
         classMap.remove(Y_2016_M_06_Balkan.class.getSimpleName());
         classMap.remove(Y_2023_M_06_D_01_Slowenien_Slap_Sopota_Slap_Beri.class.getSimpleName()); // Done 21. Dez 2025
+ */
 
         for (String clazzName : classMap.keySet().stream().sorted().toList()) {
             Class<?> clazz = classMap.get(clazzName);
@@ -56,6 +54,8 @@ public class NightlyRun {
                 CLI.exec("rm -rf /home/oliver/tmp/media", this);
                 CLI.exec("rm /home/oliver/tmp/*videoonly*", this);
                 CLI.exec("rm /home/oliver/tmp/*audioonly*", this);
+                CLI.exec("rm /home/oliver/tmp/*.txt", this);
+                CLI.exec("rm /home/oliver/tmp/*intermediate*", this);
             } catch (Exception e) {
                 // ignore
             }

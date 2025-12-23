@@ -13,21 +13,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
-    private static final String MAIN_TITLE = "August 2012\\: Interrail Europa Tour";
-
     public static void main(String[] args) {
         var main = new Y_2012_M_08_InterrailPart1();
-        main.mainTitle = MAIN_TITLE;
+        main.mainTitle = "August 2012\\: Interrail Europa Tour"; // TODO Recheck escaping
         main.run();
     }
 
     private void setup() {
-        Presets.hw_h265_hevc(sourceDir, destinationDir);         //  3m48s 110,4MB
+        Presets.hw_h265_hevc(sourceDir, destinationDir);
     }
 
     @Override
     protected void run() {
-        // TODO Lost Prague
+        File f1 = prag("/media/oliver/Extreme SSD/2012/08_Interrail_Europa/mp3/yt5s.com_-_Kristina_-_Pri_oltari_128_kbps.mp3");
         File f2 = budapest("/home/oliver/ffmpeg-video-gen/mp3/ungarisch/ByeAlex_és_a_Slepp_-_Még_mindig.mp3");
         File f3 = belgrad("/home/oliver/ffmpeg-video-gen/mp3/serbien/DraganaMirkovic_-_Sama.mp3");
         File f4 = montenegroAnreise("/home/oliver/ffmpeg-video-gen/mp3/Bojana_i_Nikola_Pekovic_-_Deda_i_unuk.mp3");
@@ -39,8 +37,47 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         File f10 = salzburgZuerich("" /* TODO audio */);
 
         var joiner = new FFMpegJoiner();
-        joiner.join("2012.08.interrail-part01", f2, f3, f4, f5, f6, f7, f8, f9, f10);
-     }
+        joiner.join("2012.08.interrail-part01", f1, f2, f3, f4, f5, f6, f7, f8, f9, f10);
+    }
+
+    public File prag(String audio) {
+        sourceDir = "/media/oliver/Extreme SSD/2012/08_Interrail_Europa/01_Prag";
+        subTitle = "2012.08.01 Tschechische Republik - Prag";
+        setup();
+
+        var yaFIMnle = new YaFIMnle("2012.08.01.tschechischerepublik.prag");
+
+        // TODO recheck, add detailTitle
+        List<Builder> builders = new ArrayList<>();
+        builders.add(vid("CLIP0019_Dortmund_CNL_arrives.AVI"));
+        builders.add(vid("CLIP0026_Trainride_to_Praha.AVI"));
+        builders.add(vid("CLIP0031_prag_uhr.AVI"));
+        builders.add(img("09_55_42.jpg"));
+        builders.add(img("10_44_28.jpg"));
+        builders.add(img("10_47_12.jpg"));
+        builders.add(img("11_02_37.jpg"));
+        builders.add(img("11_05_24.jpg"));
+        builders.add(img("11_05_33.jpg"));
+        builders.add(img("11_21_09.jpg"));
+        builders.add(img("11_21_27.jpg"));
+        builders.add(img("12_12_15.jpg"));
+        builders.add(img("12_12_32.jpg"));
+        builders.add(img("12_13_35.jpg"));
+        builders.add(img("12_36_15.jpg"));
+        builders.add(img("12_38_20.jpg"));
+        builders.add(img("12_40_01.jpg"));
+        builders.add(img("13_35_45.jpg"));
+        builders.add(img("15_05_31.jpg"));
+        builders.add(vid("CLIP0033.AVI").seconds("00:00:06", "00:00:17"));
+        builders.add(img("15_13_03.jpg"));
+        builders.add(img("15_14_29.jpg"));
+        builders.add(img("23_56_51.jpg"));
+
+        return yaFIMnle
+                .of(builders)
+                .overlayMp3(new File(audio))
+                .create();
+    }
 
     public File budapest(String audio) {
         sourceDir = "/media/oliver/Extreme SSD/2012/08_Interrail_Europa/02_Budapest";
@@ -89,7 +126,7 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         builders.add(img("17_37_17.jpg"));
         detailTitle = "Budapest Ostbf. (Keleti pályaudvar)";
         builders.add(img("19_35_10.jpg"));
-        
+
         return yaFIMnle
                 .of(builders)
                 .overlayMp3(new File(audio))
@@ -172,8 +209,8 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         builders.add(vid("CLIP0085_Trainride_To_Sutomore.AVI").seconds("00:00:00", "00:00:10").as("CLIP0084-01.mp4"));
         builders.add(vid("CLIP0087_Trainride_To_Sutomore.AVI").seconds("00:00:30", "00:00:42").as("CLIP0087-01.mp4"));
         builders.add(vid("CLIP0087_Trainride_To_Sutomore.AVI").seconds("00:01:02", "00:01:20").as("CLIP0087-02.mp4"));
-        builders.add(vid("CLIP0089_Trainride_To_Sutomore.AVI").seconds("00:00:13", "00:00:31").as("CLIP0089-01.mp4")
-        );
+        builders.add(vid("CLIP0089_Trainride_To_Sutomore.AVI").seconds("00:00:13", "00:00:31").as("CLIP0089-01.mp4"));
+
         return yaFIMnle
                 .of(builders)
                 .overlayMp3(new File(audio))
@@ -217,8 +254,8 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         builders.add(vid("CLIP0115.AVI").seconds("00:00:15", "00:00:30").as("CLIP0115-000015-000030.mp4"));
         builders.add(vid("CLIP0117_Beautiful_music.AVI").seconds("00:00:10", "00:00:18").as("CLIP0117_Beautiful_music-000010-000018.mp4"));
         builders.add(vid("CLIP0117_Beautiful_music.AVI").seconds("00:01:02", "00:01:23").as("CLIP0117_Beautiful_music-000102-000123.mp4"));
-        builders.add(vid("CLIP0118_Beautiful_music.AVI")
-        );
+        builders.add(vid("CLIP0118_Beautiful_music.AVI"));
+
         return yaFIMnle
                 .of(builders)
                 .overlayMp3(new File(audio))
@@ -270,7 +307,7 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         List<Builder> builders = new ArrayList<>();
         detailTitle = "Anreise aus Crna Gora";
         builders.add(img("07_26_46.jpg")
-                        .appendImageFilterBeforeCrop(ImageFilters.partialBlur(675, 400, 350, 60, 10)) // blur my name on ticket
+                .appendImageFilterBeforeCrop(ImageFilters.partialBlur(675, 400, 350, 60, 10)) // blur my name on ticket
         ); // TODO Does not work anymore since pre-upscale and wrong position!
         builders.add(vid("CLIP0135_Busride_Herceg_Novi_to_Mostar.AVI").seconds("00:07:13", "00:07:40"));
         builders.add(img("09_06_42.jpg")); // noch im bus
@@ -297,9 +334,8 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         builders.add(img("18_55_52.jpg"));
         builders.add(vid("CLIP0004_Mostar_360grad.AVI"));
         builders.add(vid("CLIP0007_Mostar360grad_Sprung_von_Bruecke.AVI").seconds("00:00:00", "00:00:30").as("CLIP0007-000000-000030.mp4"));
-        builders.add(img("18_56_02.jpg")); // Springer
-        builders.add(vid("CLIP0007_Mostar360grad_Sprung_von_Bruecke.AVI").seconds("00:00:45", "00:01:20").as("CLIP0007-000045-000120.mp4") //45-1:20 // sprung
-        );
+        builders.add(img("18_56_02.jpg"));
+        builders.add(vid("CLIP0007_Mostar360grad_Sprung_von_Bruecke.AVI").seconds("00:00:45", "00:01:20").as("CLIP0007-000045-000120.mp4"));
         return yaFIMnle
                 .of(builders)
                 .overlayMp3(new File(audio))
@@ -369,8 +405,7 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         builders.add(img("08_48_00.jpg"));
         builders.add(img("09_08_41.jpg"));
         builders.add(vid("CLIP0034_zagreb_graffiti.AVI").seconds("00:00:03", "00:00:50").as("CLIP0034-000003-000050.mp4"));
-        builders.add(vid("CLIP0035_zagreb_graffiti.AVI")
-        );
+        builders.add(vid("CLIP0035_zagreb_graffiti.AVI"));
         return yaFIMnle
                 .of(builders)
                 .overlayMp3(new File(audio))

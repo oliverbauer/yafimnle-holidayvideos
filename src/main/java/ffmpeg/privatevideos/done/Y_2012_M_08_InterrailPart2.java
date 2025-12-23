@@ -24,7 +24,7 @@ public class Y_2012_M_08_InterrailPart2 extends AbstractNewApproach {
     @Override
     protected void run() {
         var f1 = paris("/home/oliver/ffmpeg-video-gen/mp3/french/Stromae-tous_les_memes-cutted.mp3");
-        var f2 = monaco("/media/oliver/Extreme SSD/2012/08_Interrail_Europa/Musik/Jude_York_-_Monaco.mp3"); // TODO Probleme mit mp3-Daten wenn Verzeichnis nicht existiert?
+        var f2 = monaco("/media/oliver/Extreme SSD/2012/08_Interrail_Europa/mp3/Jude_York_-_Monaco.mp3");
         var f3 = marseille("/home/oliver/ffmpeg-video-gen/mp3/Indila_-_Dernière_Danse.mp3");
         var f4 = sansebastian("/home/oliver/ffmpeg-video-gen/mp3/latin/Maluma-Corazon-cutted.mp3");
         var f5 = lissabon("/home/oliver/ffmpeg-video-gen/mp3/latin/Carminho-As_Pedras_Da_Minha_Rua-cutted.mp3");
