@@ -136,11 +136,10 @@ public class Y_2024_M_04_Klammen_in_Bayern_und_Oesterreich extends AbstractNewAp
         var yaFIMnle = new YaFIMnle("2024.04.28");
         List<Builder> builders = new ArrayList<>();
         detailTitle = "Ehnbachklamm in Zirl bei Innsbruck";
-        builders.add(img("DSCN0817.JPG")
-                .fade(FadeType.FADE));
+        builders.add(img("DSCN0817.JPG").fadeType(FadeType.FADE));
         builders.add(img("DSCN0820.JPG"));
         builders.add(vid("GX010484.MP4"));
-        builders.add(img("DSCN0830.JPG").fade(FadeType.WIPELEFT));
+        builders.add(img("DSCN0830.JPG").fadeType(FadeType.WIPELEFT));
         builders.add(vid("GX010486.MP4").seconds("00:00:05", "00:00:20").as("GX010486-000005-000020.mp4"));
         builders.add(vid("GX010486.MP4").seconds("00:00:48", "00:01:10").as("GX010486-000048-000110.mp4"));
         builders.add(img("DSCN0832.JPG"));

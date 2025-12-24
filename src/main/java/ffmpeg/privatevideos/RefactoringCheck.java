@@ -11,7 +11,7 @@ import java.util.List;
 public class RefactoringCheck extends AbstractNewApproach {
     public static void main(String[] args) {
         var main = new RefactoringCheck();
-        main.sourceDir = "/media/oliver/Extreme SSD/2017/2017.05.31_Bovec_nach_Kobarid/";
+        main.sourceDir = "/home/oliver/2017.05.31_Bovec_nach_Kobarid/";
         main.mainTitle = "Refactoring Test";
         main.destinationDir = "/tmp/yafimnle";
         main.run();
@@ -42,7 +42,7 @@ public class RefactoringCheck extends AbstractNewApproach {
     }
 
     private void v1() {
-        CLI.exec("rm -rf /tmp/yafimnle/media", this);
+        CLI.exec("rm -rf /tmp/yafimnle/home", this);
 
         subTitle = "2017.05.31 (3/3) Bovec nach Kobarid";
         Presets.x264_normal_quality(sourceDir, destinationDir);
@@ -56,7 +56,7 @@ public class RefactoringCheck extends AbstractNewApproach {
     }
 
     private void v2() {
-        CLI.exec("rm -rf /tmp/yafimnle/media", this);
+        CLI.exec("rm -rf /tmp/yafimnle/home", this);
 
         subTitle = "2017.05.31 (3/3) Bovec nach Kobarid";
         Presets.hw_h264_nvenc(sourceDir, destinationDir);
@@ -71,7 +71,7 @@ public class RefactoringCheck extends AbstractNewApproach {
     }
 
     private void v3() {
-        CLI.exec("rm -rf /tmp/yafimnle/media", this);
+        CLI.exec("rm -rf /tmp/yafimnle/home", this);
 
         subTitle = "2017.05.31 (3/3) Bovec nach Kobarid";
         Presets.hw_h264_no_transformation(sourceDir, destinationDir);
@@ -86,7 +86,7 @@ public class RefactoringCheck extends AbstractNewApproach {
     }
 
     private void v4() {
-        CLI.exec("rm -rf /tmp/yafimnle/media", this);
+        CLI.exec("rm -rf /tmp/yafimnle/home", this);
 
         subTitle = "2017.05.31 (3/3) Bovec nach Kobarid";
         Presets.hw_h265_hevc_no_transformation(sourceDir, destinationDir);

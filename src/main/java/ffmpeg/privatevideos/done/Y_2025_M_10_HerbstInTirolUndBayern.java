@@ -53,7 +53,7 @@ public class Y_2025_M_10_HerbstInTirolUndBayern extends AbstractNewApproach {
         builders.add(img("DSC01724.jpg"));
         builders.add(img("DSC01731.jpg"));
         builders.add(vid("GX012305.MP4"));
-        builders.add(img("P1022267.JPG").fade(FadeType.FADE));
+        builders.add(img("P1022267.JPG").fadeType(FadeType.FADE));
         builders.add(img("DSC01745.jpg"));
         builders.add(vid("GX012307.MP4"));
         builders.add(vid("GX012314.MP4"));
