@@ -7,6 +7,7 @@ import io.github.yafimnle.config.Presets;
 import io.github.yafimnle.ffmpeg.FFMpegJoiner;
 import io.github.yafimnle.image.ar.AR;
 import io.github.yafimnle.image.enums.Gravity;
+import io.github.yafimnle.image.filter.ImageFilters;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -71,8 +72,15 @@ public class Y_2012_M_08_InterrailPart2 extends AbstractNewApproach {
         builders.add(img("DSCI0039.jpg").ar(AR.crop(Gravity.SOUTH, false)));
         builders.add(vid("CLIP0011_Paris_an_diesem_Turm.AVI").seconds("00:00:07", "00:00:14").as("CLIP0011-000007-000014.mp4"));
         detailTitle = "Eiffelturm";
-        builders.add(img("DSCI0041.jpg").fromPortrait());
-        builders.add(img("DSCI0045.jpg").rotate(90).fromPortrait());
+        builders.add(
+                img("DSCI0041.jpg")
+                        .appendImageFilterBeforeCrop(ImageFilters.extend()) // "fromPortrait"
+        );
+        builders.add(
+                img("DSCI0045.jpg")
+                        .appendImageFilterBeforeCrop(ImageFilters.rotate(90))
+                        .appendImageFilterBeforeCrop(ImageFilters.extend()) // "fromPortrait"
+        );
         detailTitle = "";
         builders.add(img("DSCI0056.jpg"));
         builders.add(img("DSCI0058.jpg").ar(AR.crop(Gravity.SOUTH, false)));
