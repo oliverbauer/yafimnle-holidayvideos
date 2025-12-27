@@ -5,8 +5,8 @@ import io.github.yafimnle.YaFIMnle;
 import io.github.yafimnle.common.Builder;
 import io.github.yafimnle.config.Presets;
 import io.github.yafimnle.ffmpeg.FFMpegJoiner;
-import io.github.yafimnle.video.filter.VidStab;
-import io.github.yafimnle.video.filter.VideoFilter;
+import io.github.yafimnle.ffmpeg.filter.VidStab;
+import io.github.yafimnle.ffmpeg.filter.VideoFilter;
 
 import java.io.File;
 import java.util.ArrayList;

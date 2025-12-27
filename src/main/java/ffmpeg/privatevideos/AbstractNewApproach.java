@@ -1,10 +1,10 @@
 package ffmpeg.privatevideos;
 
 import io.github.yafimnle.YaFIMnle;
-import io.github.yafimnle.image.ImageBuilder;
-import io.github.yafimnle.transformation.Transformation;
-import io.github.yafimnle.transformation.Transformations;
-import io.github.yafimnle.video.VideoBuilder;
+import io.github.yafimnle.ffmpeg.FilterComplexs;
+import io.github.yafimnle.ffmpeg.VideoBuilder;
+import io.github.yafimnle.ffmpeg.filtercomplex.FilterComplex;
+import io.github.yafimnle.imagemagick.ImageBuilder;
 
 public abstract class AbstractNewApproach {
     protected String sourceDir;
@@ -16,22 +16,26 @@ public abstract class AbstractNewApproach {
     protected boolean withBox = false;
 
     protected ImageBuilder img(String img) {
-        return YaFIMnle.img(img, zoomIn());
+        FilterComplex filterComplex = zoomIn();
+        return YaFIMnle.img(img).filterCompex(filterComplex);
     }
-    protected ImageBuilder img(String img, Transformation transformation) {
-        return YaFIMnle.img(img, transformation);
+    protected ImageBuilder img(String img, FilterComplex filterComplex) {
+        return YaFIMnle.img(img).filterCompex(filterComplex);
     }
     protected VideoBuilder vid(String vid) {
-        return YaFIMnle.vid(vid, videoTransformation());
+        FilterComplex filterComplex = videoTransformation();
+        return YaFIMnle.vid(vid).filterCompex(filterComplex);
     }
-    protected Transformation videoTransformation() {
-        return Transformations.videoTransformation(detailTitle, subTitle, mainTitle, withBox);
+
+    protected FilterComplex videoTransformation() {
+        return FilterComplexs.videoTransformation(detailTitle, subTitle, mainTitle, withBox);
     }
-    protected Transformation zoomIn() {
-        return Transformations.zoomIn(detailTitle, subTitle, mainTitle, withBox);
+    protected FilterComplex zoomIn() {
+
+        return FilterComplexs.zoomIn(detailTitle, subTitle, mainTitle, withBox);
     }
-    protected Transformation zoomOut() {
-        return Transformations.zoomOut(detailTitle, subTitle, mainTitle, withBox);
+    protected FilterComplex zoomOut() {
+        return FilterComplexs.zoomOut(detailTitle, subTitle, mainTitle, withBox);
     }
     protected abstract void run();
 }

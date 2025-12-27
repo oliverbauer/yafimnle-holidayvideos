@@ -4,7 +4,9 @@ import ffmpeg.privatevideos.AbstractNewApproach;
 import io.github.yafimnle.YaFIMnle;
 import io.github.yafimnle.common.Builder;
 import io.github.yafimnle.common.FadeType;
+import io.github.yafimnle.config.Config;
 import io.github.yafimnle.config.Presets;
+import io.github.yafimnle.config.Resolution;
 import io.github.yafimnle.ffmpeg.FFMpegJoiner;
 
 import java.io.File;
@@ -31,7 +33,8 @@ public class Y_2025_M_10_HerbstInTirolUndBayern extends AbstractNewApproach {
     }
 
     private void setup() {
-        Presets.hw_h265_hevc(sourceDir, destinationDir);
+        Config c = Presets.hw_h265_hevc(sourceDir, destinationDir);
+        c.resolution(Resolution.ULTRA_HD);
     }
 
     public File gen20251011() {

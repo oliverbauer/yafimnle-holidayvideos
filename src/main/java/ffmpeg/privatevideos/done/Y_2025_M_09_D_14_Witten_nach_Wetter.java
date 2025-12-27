@@ -1,12 +1,11 @@
 package ffmpeg.privatevideos.done;
 
-
 import ffmpeg.privatevideos.AbstractNewApproach;
 import io.github.yafimnle.YaFIMnle;
 import io.github.yafimnle.common.Builder;
 import io.github.yafimnle.config.Presets;
-import io.github.yafimnle.image.ar.AR;
-import io.github.yafimnle.image.enums.Gravity;
+import io.github.yafimnle.imagemagick.ar.AR;
+import io.github.yafimnle.imagemagick.enums.Gravity;
 
 import java.util.ArrayList;
 import java.util.List;

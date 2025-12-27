@@ -5,7 +5,7 @@ import io.github.yafimnle.YaFIMnle;
 import io.github.yafimnle.common.Builder;
 import io.github.yafimnle.config.Presets;
 import io.github.yafimnle.ffmpeg.FFMpegJoiner;
-import io.github.yafimnle.image.ar.AR;
+import io.github.yafimnle.imagemagick.ar.AR;
 
 import java.io.File;
 import java.util.ArrayList;

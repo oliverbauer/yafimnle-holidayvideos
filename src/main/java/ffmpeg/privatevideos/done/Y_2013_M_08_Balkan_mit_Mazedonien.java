@@ -5,8 +5,6 @@ import io.github.yafimnle.YaFIMnle;
 import io.github.yafimnle.common.Builder;
 import io.github.yafimnle.config.*;
 import io.github.yafimnle.ffmpeg.FFMpegJoiner;
-import io.github.yafimnle.image.ar.AR;
-import io.github.yafimnle.image.enums.Gravity;
 
 import java.io.File;
 import java.util.ArrayList;

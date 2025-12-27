@@ -6,7 +6,7 @@ import io.github.yafimnle.common.Builder;
 import io.github.yafimnle.config.Config;
 import io.github.yafimnle.config.Presets;
 import io.github.yafimnle.ffmpeg.FFMpegJoiner;
-import io.github.yafimnle.image.filter.ImageFilters;
+import io.github.yafimnle.imagemagick.filter.ImageFilters;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class Y_2012_M_08_InterrailPart1 extends AbstractNewApproach {
         File f7 = mostar("/home/oliver/ffmpeg-video-gen/mp3/balkan_allgemein/SelmaCavkicIKemalMalovcic-KaziMeniKazi.mp3");
         File f8 = sarajevo("/home/oliver/ffmpeg-video-gen/mp3/balkan_allgemein/BAKA_PRASE_x_VOYAGE_-_VVS.mp3");
         File f9 = zagreb("/home/oliver/ffmpeg-video-gen/mp3/Halid_Beslic_-_Kad_zaigra_srce_od_meraka.mp3");
-        File f10 = salzburgZuerich("" /* TODO audio */);
+        File f10 = salzburgZuerich(""); // TODO Audio
 
         var joiner = new FFMpegJoiner();
         joiner.join("2012.08.interrail-part01", f1, f2, f3, f4, f5, f6, f7, f8, f9, f10);

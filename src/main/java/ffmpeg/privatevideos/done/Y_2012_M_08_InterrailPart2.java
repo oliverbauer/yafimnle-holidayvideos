@@ -5,9 +5,9 @@ import io.github.yafimnle.YaFIMnle;
 import io.github.yafimnle.common.Builder;
 import io.github.yafimnle.config.Presets;
 import io.github.yafimnle.ffmpeg.FFMpegJoiner;
-import io.github.yafimnle.image.ar.AR;
-import io.github.yafimnle.image.enums.Gravity;
-import io.github.yafimnle.image.filter.ImageFilters;
+import io.github.yafimnle.imagemagick.ar.AR;
+import io.github.yafimnle.imagemagick.enums.Gravity;
+import io.github.yafimnle.imagemagick.filter.ImageFilters;
 
 import java.io.File;
 import java.util.ArrayList;
